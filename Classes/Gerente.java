@@ -1,10 +1,17 @@
+package Classes;
+
 public class Gerente extends  Funcionario{
 
     private  int senha;
 
 
-    public Gerente(String nome, String cpf, double salario, int tipoFuncionario, int senha) {
-        super(nome, cpf, salario, tipoFuncionario);
+    public Gerente(String nome, String cpf, double salario, int senha) {
+        super(nome, cpf, salario);
+    }
+
+    @Override
+    public double getBonificacao() {
+        return super.getBonificacao() + super.getSalario();
     }
 
     public void setSenha(int senha) {
@@ -19,8 +26,4 @@ public class Gerente extends  Funcionario{
             return false;
         }
     }
-
-    //public double getBonificacao(){
-    //    return this.
-    //}
 }
