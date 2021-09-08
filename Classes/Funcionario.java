@@ -15,6 +15,7 @@ public class Funcionario {
     }
 
     public double getBonificacao() {
+        System.out.println("bonificacao funcionario");
         return this.salario * 0.1;
     }
 
